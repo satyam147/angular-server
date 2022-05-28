@@ -3,6 +3,9 @@ var router = express.Router();
 const db = require('../dbconnection');
 var jwt = require('jsonwebtoken');
 
+/**
+ * login route to check user and return JWT token
+ */
 router.post('/login', async (req, res) => {
     let body = req.body;
     let sql = `SELECT *
